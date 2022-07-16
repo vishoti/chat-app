@@ -35,3 +35,7 @@ steps:
     archiveType: 'tar'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+- task: Docker@2
+  inputs:
+    command: 'build'
+    Dockerfile: '**/dockerfile'
